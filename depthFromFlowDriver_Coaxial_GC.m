@@ -14,6 +14,8 @@ catch
     addpath('C:\Users\richa\Documents\MATLAB\gco-v3.0\matlab')      % Graph Cuts
 end
 
+radial2XYdriver
+
 for smoothingFactor = [1]
     for dataFactor = [90]
         for horzNeighborMaskWeight = [5]
