@@ -2,8 +2,17 @@
 % to get ray_out1_f and ray_out1_b run radial2XYdriver on flow_rect20.mat
 
 tic
-addpath('C:\Users\Richard\Documents\MATLAB\flow-code-matlab')     % this is flow to color
-addpath('C:\Users\Richard\Documents\MATLAB\gco-v3.0\matlab')      % Graph Cuts
+try
+    addpath('C:\Users\Richard\Documents\MATLAB\flow-code-matlab')     % this is flow to color
+catch
+    addpath('C:\Users\richa\Documents\MATLAB\flow-code-matlab')     % this is flow to color
+end
+
+try
+    addpath('C:\Users\Richard\Documents\MATLAB\gco-v3.0\matlab')      % Graph Cuts
+catch
+    addpath('C:\Users\richa\Documents\MATLAB\gco-v3.0\matlab')      % Graph Cuts
+end
 
 for smoothingFactor = [1]
     for dataFactor = [90]

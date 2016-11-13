@@ -1,6 +1,19 @@
 % version 25 Aug 2016
 % to get ray_out1_f and ray_out1_b run radial2XYdriver on flow_10m.mat
 
+try
+    addpath('C:\Users\Richard\Documents\MATLAB\flow-code-matlab')     % this is flow to color
+catch
+    addpath('C:\Users\richa\Documents\MATLAB\flow-code-matlab')     % this is flow to color
+end
+
+try
+    addpath('C:\Users\Richard\Documents\MATLAB\gco-v3.0\matlab')      % Graph Cuts
+catch
+    addpath('C:\Users\richa\Documents\MATLAB\gco-v3.0\matlab')      % Graph Cuts
+end
+
+radial2XYdriver
 
 for smoothingFactor = [10]
     for dataFactor = [400]
@@ -10,7 +23,6 @@ for smoothingFactor = [10]
                 %dataFactor = 90;
                 %horzNeighborMaskWeight = 5;
                 %verticalNeighborMaskWeight = 2;
-
 
                 params.columns = 400;
                 params.pixelDim = .006;
@@ -40,7 +52,6 @@ for smoothingFactor = [10]
 
                 %load('flow.mat')
                 %load('rayOut1')
-                addpath('C:\Users\Richard\Documents\MATLAB\flow-code-matlab')   %this is flow to color
 
                 imageSet = 1;
 
@@ -53,9 +64,6 @@ for smoothingFactor = [10]
 
                 [numRows,numCols] = size(wf);
                 optimalLabellingOut = [];
-
-                % Add path where gco-v3.0\matlab is located
-                addpath('C:\Users\Richard\Documents\MATLAB\gco-v3.0\matlab')
 
                 numSites = numRows*numCols;
 
